@@ -1,0 +1,12 @@
+C:\Starbucks\core\Core.MediatOR\bin\Debug\net9.0\Core.MediatOR.deps.json
+C:\Starbucks\core\Core.MediatOR\bin\Debug\net9.0\Core.MediatOR.dll
+C:\Starbucks\core\Core.MediatOR\bin\Debug\net9.0\Core.MediatOR.pdb
+C:\Starbucks\core\Core.MediatOR\obj\Debug\net9.0\Core.MediatOR.csproj.AssemblyReference.cache
+C:\Starbucks\core\Core.MediatOR\obj\Debug\net9.0\Core.MediatOR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Starbucks\core\Core.MediatOR\obj\Debug\net9.0\Core.MediatOR.AssemblyInfoInputs.cache
+C:\Starbucks\core\Core.MediatOR\obj\Debug\net9.0\Core.MediatOR.AssemblyInfo.cs
+C:\Starbucks\core\Core.MediatOR\obj\Debug\net9.0\Core.MediatOR.csproj.CoreCompileInputs.cache
+C:\Starbucks\core\Core.MediatOR\obj\Debug\net9.0\Core.MediatOR.dll
+C:\Starbucks\core\Core.MediatOR\obj\Debug\net9.0\refint\Core.MediatOR.dll
+C:\Starbucks\core\Core.MediatOR\obj\Debug\net9.0\Core.MediatOR.pdb
+C:\Starbucks\core\Core.MediatOR\obj\Debug\net9.0\ref\Core.MediatOR.dll
