@@ -1,0 +1,72 @@
+## Build artifacts
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# IDE settings
+*.userprefs
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+**/project.nuget.cache
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# MSBuild generated files
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.assets.cache
+*.g.cs
+*.g.cs/
+*.generated.cs
+*.rsp
+*.cache
+*.csproj.CoreCompileInputs.cache
+*.csproj.AssemblyReference.cache
+*.genruntimeconfig.cache
+
+# Razor / MVC artifacts
+**/rjsm*.cache.json
+**/rpswa*.cache.json
+**/rjsmcshtml*.cache.json
+**/staticwebassets.build.json
+**/staticwebassets.build.endpoints.json
+**/staticwebassets.build.json.cache
+**/swae.build.ex.cache
+
+# Coverage / Test artifacts
+*.coverage
+*.coveragexml
+**/*.Coverlet*
+**/.msCoverageSourceRootsMapping*
+**/CoverletSourceRootsMapping*
+
+# Logs
+*.log
+logs/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+.DS_Store
+
+# Others
+.env
+*.pdb
+*.dll
+*.mdb
+*.json.cache
