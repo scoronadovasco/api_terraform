@@ -70,3 +70,12 @@ ehthumbs.db
 *.dll
 *.mdb
 *.json.cache
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+# Permitir archivos de configuración
+!iac/*.tf
