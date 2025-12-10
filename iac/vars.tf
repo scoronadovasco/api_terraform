@@ -4,7 +4,16 @@ variable "env_id" {
   default     = "dev"
 }
 variable "subscription_id" {
-  type = string
+  type        = string
   description = "azure description id"
-  default = "34820a7f-49a4-448c-adab-ee7b09d9403b"
+  default     = "ef0daded-79da-4cd0-ba63-e41e85e065d6"
+}
+
+variable "tags" {
+  type = map(string)
+  default = {
+    "enviroment" = "DEV"
+    "src"        = "terraform"
+    "owner"      = "scoronado"
+  }
 }
