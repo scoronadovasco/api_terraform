@@ -17,3 +17,19 @@ variable "tags" {
     "owner"      = "scoronado"
   }
 }
+
+
+variable "userdb" {
+  type = string
+  default = "scoronado"
+}
+variable "userdbpass" {
+  type      = string
+  sensitive = true
+  default = "Ac6f1cf3.123.."
+}
+
+variable "location" {
+  description = "location 2 for azure"
+  default = "East US 2"
+}
