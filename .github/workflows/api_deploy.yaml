@@ -1,0 +1,26 @@
+name: build and deploy web api to azure
+
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build-and-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout repository
+              id: github
+              uses: actions/checkout@v4
+
+            - name: setup web api .net
+              uses: actions/setup-dotnet@v4
+              with:
+                  dotnet-version: "10.0.x"
+
+            - name: configure azure acr
+              uses: azure/docker-login@v2
+              with:
+                  login-server: ${{vars.ACR_SERVER}}
+                  username: ${{secrets.ACR_USER_NAME}}
+                  password: ${{secrets.ACR_USER_PASS}}
