@@ -58,11 +58,11 @@ jobs:
           ACR_SERVER: ${{vars.ACR_SERVER}}
         with:
           registryUrl: ${{ vars.ACR_SERVER }}
-          imageToDeploy: $ACR_SERVER/app:$IMAGE_TAG
+          imageToDeploy: $ACR_SERVER/netapp:$IMAGE_TAG
           targetPort: 8080
           ingress: external
           containerAppName: aca-api-net
           containerAppEnvironment: azc-api-net-Environment
           resourceGroup: rg_api_net
           environmentVariables: |
-            ASPNETCORE_ENVIRONMENT=Development ASPNETCORE_URLS=http//+:8080
+            ASPNETCORE_ENVIRONMENT=Development ASPNETCORE_URLS=http://+:8080
