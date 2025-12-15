@@ -25,9 +25,9 @@ resource "azurerm_container_app" "azcapp-api-net" {
 
   template {
     min_replicas = 1
-    max_replicas = 3
+    max_replicas = 1
     container {
-      name   = "aca-api-net-app"
+      name   = "stub"
       image  = "mcr.microsoft.com/k8se/quickstart:latest"
       cpu    = 0.25
       memory = "0.5Gi"
@@ -38,13 +38,19 @@ resource "azurerm_container_app" "azcapp-api-net" {
   ingress {
     allow_insecure_connections = false
     external_enabled           = true
-    target_port                = 8080
+    target_port                = 80
     traffic_weight {
       percentage = 100
       label = "primary"
       latest_revision = true
 
     }
+  }
+
+  lifecycle {
+    ignore_changes = [ 
+      template, ingress, registry, secret
+     ]
   }
   tags = var.tags
 }
