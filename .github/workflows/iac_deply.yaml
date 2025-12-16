@@ -1,0 +1,31 @@
+name: "iac continuos integration"
+
+on:
+    push:
+        branches:
+            - main
+jobs:
+    terraform-deploy:
+        runs-on: ubuntu-latest
+        env:
+            TF_VERSION : 1.14.0
+            ARM_CLIENT_ID: ${{secrets.ARM_CLIENT_ID}}
+            ARM_CLIENT_SECRET: ${{secrets.ARM_CLIENT_SECRET}}
+            ARM_SUBSCRIPTION_ID: ${{secrets.ARM_SUBSCRIPTION_ID}}
+            ARM_TENANT_ID: ${{secrets.ARM_TENANT_ID}}
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
+
+            - name: azure login
+              uses: azure/login@v1
+              with:
+                creds: ${{secrets.AZURE_CREDENTIALS}}
+
+            - name: terraform install
+              uses: hashicorp/setup-terraform@v3
+              with:
+                terraform_version: ${{env.TF_VERSION}}
+
+            - name: terraform init
+              run : terraform init
