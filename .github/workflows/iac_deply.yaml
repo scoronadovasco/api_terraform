@@ -26,6 +26,7 @@ jobs:
               with:
                 terraform_version: ${{env.TF_VERSION}}
 
-            - name: Terraform Apply
-              run: terraform apply -auto-approve tfplan
+
+            - name: Terraform init
+              run: terraform init
               working-directory: ./iac/
