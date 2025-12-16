@@ -6,7 +6,7 @@ variable "env_id" {
 variable "subscription_id" {
   type        = string
   description = "azure description id"
-  default     = "ef0daded-79da-4cd0-ba63-e41e85e065d6"
+  
 }
 
 variable "tags" {
@@ -26,7 +26,6 @@ variable "userdb" {
 variable "userdbpass" {
   type      = string
   sensitive = true
-  default = "Ac6f1cf3.123.."
 }
 
 variable "location" {
