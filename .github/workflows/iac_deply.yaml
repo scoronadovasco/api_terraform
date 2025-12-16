@@ -1,9 +1,10 @@
 name: "iac continuos integration"
-
 on:
-    push:
-        branches:
-            - main
+  push:
+    paths:
+      - 'iac/**'
+    branches:
+      - main
 jobs:
     terraform-deploy:
         runs-on: ubuntu-latest
